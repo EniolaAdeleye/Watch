@@ -1,4 +1,4 @@
 //Heartrate mx_driver.c
 
-#include "max30101.h"
+#include "MX_driver.h"
 
