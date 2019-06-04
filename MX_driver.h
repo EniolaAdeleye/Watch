@@ -44,14 +44,58 @@
 
 #define MX_BYTES_PER_CHANNEL			3
 #define MX_MAX_NUM_CHANNELS			3
-#define MX_MAX_BYTES_PER_SAMPLE			(MAX30101_MAX_NUM_CHANNELS * \
-						MAX30101_BYTES_PER_CHANNEL)
+#define MX_MAX_BYTES_PER_SAMPLE			(MX_MAX_NUM_CHANNELS * \
+						MX_BYTES_PER_CHANNEL)
 
 #define MX_SLOT_LED_MASK			0x03
 
 #define MX_FIFO_DATA_BITS			18
-#define MX_FIFO_DATA_MASK			((1 << MAX30101_FIFO_DATA_BITS) - 1)
+#define MX_FIFO_DATA_MASK			((1 << MX_FIFO_DATA_BITS) - 1)
 
+
+enum mx_mode {
+	MX_MODE_HEART_RATE			= 2,
+	MX_MODE_SPO2				= 3,
+	MX_MODE_MULTI_LED			= 7,
+};
+
+enum mx_slot {
+	MX_SLOT_DISABLED			= 0,
+	MX_SLOT_RED_LED1_PA,
+	MX_SLOT_IR_LED2_PA,
+	MX_SLOT_GREEN_LED3_PA,
+	MX_SLOT_RED_PILOT_PA,
+	MX_SLOT_IR_PILOT_PA,
+	MX_SLOT_GREEN_PILOT_PA,
+};
+
+enum mx_led_channel {
+	MX_LED_CHANNEL_RED			= 0,
+	MX_LED_CHANNEL_IR,
+	MX_LED_CHANNEL_GREEN,
+};
+
+enum mx_pw {
+	MX_PW_15BITS				= 0,
+	MX_PW_16BITS,
+	MX_PW_17BITS,
+	MX_PW_18BITS,
+};
+
+struct mx_config {
+	u8_t fifo;
+	u8_t spo2;
+	u8_t led_pa[MX_MAX_NUM_CHANNELS];
+	enum mx_mode mode;
+	enum mx_slot slot[4];
+};
+
+struct mx_data {
+	struct device *i2c;
+	u32_t raw[MX_MAX_NUM_CHANNELS];
+	u8_t map[MX_MAX_NUM_CHANNELS];
+	u8_t num_channels;
+};
 */
 
 
