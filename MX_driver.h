@@ -8,7 +8,7 @@
 #define MX_REG_FIFO_WR_PTR		    0x04    //FIFO Write Pointer
 #define MX_REG_FIFO_OVF_COUNTER		0x05    //Overflow Counter
 #define MX_REG_FIFO_RD_PTR		    0x06    //FIFO Read Pointer
-#define MX_REG_FIFO_DATA		    0x07    //FIFO Data Register
+#define MX_REG_FIFO_DATA		      0x07    //FIFO Data Register
 #define MX_REG_FIFO_CONFIG		    0x08    //FIFO Configuration
 #define MX_REG_MODE_CONFIG		    0x09    //Mode Configuration
 #define MX_REG_SPO2_CONFIG		    0x0a    //SpO2 Configuration
@@ -16,12 +16,12 @@
 #define MX_REG_LED2_PA		        0x0d    //LED Pulse Amplitude 2
 #define MX_REG_LED3_PA		        0x0e    //LED Pulse Amplitude 3
 #define MX_REG_PILOT_PA		        0x10
-#define MX_REG_MULTI_LED		    0x11    //Multi-LED Mode Control Register
+#define MX_REG_MULTI_LED		      0x11    //Multi-LED Mode Control Register
 #define MX_REG_TEMP_INT		        0x1f    //Temp Value_Integer
-#define MX_REG_TEMP_FRAC		    0x20    //Temp Value_Fraction
-#define MX_REG_TEMP_CONFIG          0x21    //Die Temperature Config
+#define MX_REG_TEMP_FRAC		      0x20    //Temp Value_Fraction
+#define MX_REG_TEMP_CONFIG        0x21    //Die Temperature Config
 #define MX_REG_PROX_INT		        0x30
-#define MX_REG_REV_ID		        0xfe    //Revision ID
+#define MX_REG_REV_ID		          0xfe    //Revision ID
 #define MX_REG_PART_ID		        0xff    //Part ID
 
 
