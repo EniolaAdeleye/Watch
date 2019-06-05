@@ -1,6 +1,10 @@
 // Heartrate driver for Smartwatch
 // MAXIM 30101
 
+#include <sensor.h>
+#include <i2c.h>
+#include <gpio.h>
+
 #define MX_REG_INT_STATUS1            		0x00    //Interrupt status 1
 #define MX_REG_INT_STATUS2            		0x01    //Interrupt status 2
 #define MX_REG_INT_ENABLE1            		0x02    //Interrupt Enable 1
@@ -25,7 +29,7 @@
 #define MX_REG_PART_ID                		0xff    //Part ID
 
 #define MX_I2C_ADDRESS		            	0x57
-/*
+
 
 #define MX_INT_PPG_MASK				(1 << 6)
 
@@ -96,7 +100,7 @@ struct mx_data {
 	u8_t map[MX_MAX_NUM_CHANNELS];
 	u8_t num_channels;
 };
-*/
+
 
 
 
