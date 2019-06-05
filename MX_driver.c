@@ -1,8 +1,8 @@
 //Heartrate MX_driver.c
 
-#include "MX_driver.h"
+#include <MX_driver.h>
 
-#include <logging/log.h>
+#include <log.h>
 
 #define LOG_LEVEL CONFIG_SENSOR_LEVEL
 LOG_MOD_REG(MAX30101);
