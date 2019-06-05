@@ -1,11 +1,11 @@
-//Heartrate mx_driver.c
+//Heartrate MX_driver.c
 
 #include "MX_driver.h"
 
 #include <logging/log.h>
 
 #define LOG_LEVEL CONFIG_SENSOR_LEVEL
-LOG_MOD_REG(MAX30101)
+LOG_MOD_REG(MAX30101);
 
 static int MX_GET_SAMPLES(struct device *devMem, enum sensor_channel chan){           /*the *devMem will will take the address of the variable and get the driver data passed into the MX_DATA *data address pointer*/
 
