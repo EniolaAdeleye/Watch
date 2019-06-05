@@ -38,7 +38,7 @@
 
 #define MX_SPO2_ADC_RGE_SHIFT			5
 #define MX_SPO2_SR_SHIFT			2
-#define MX_SPO2_PW_SHIFT			0 
+#define MX_SPO2_PW_SHIFT			0
 
 #define MX_PART_ID		                0x15
 
@@ -50,7 +50,7 @@
 #define MX_SLOT_LED_MASK			0x03
 
 #define MX_FIFO_DATA_BITS			18
-#define MX_FIFO_DATA_MASK			((1 << MX_FIFO_DATA_BITS) - 1)
+#define MX_FIFO_DATA_MASK			((1 << 18) - 1)
 
 
 enum mx_mode {
