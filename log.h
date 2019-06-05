@@ -4,13 +4,6 @@
 #define WATCH_LOG_CORE_H_
 #ifndef WATCH_LOG_MSG_H_
 #define WATCH_LOG_MSG_H_
-
-#include <kernel.h>
-#include <assert.h>
-#include <string.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include i2c.h
 #ifndef WATCH_ATOMIC_H_
 #define WATCH_ATOMIC_H_
 #ifndef WATCH_TOOLCHAIN_H_
@@ -19,6 +12,13 @@
 #define WATCH_TOOLCHAIN_GCC_H_
 #ifndef WATCH_TOOLCHAIN_COMMON_H_
 #define WATCH_TOOLCHAIN_COMMON_H_
+
+#include <kernel.h>
+#include <assert.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <i2c.h>
 
 #if defined(__XCC__)
 #include <toolchain/xcc.h>
